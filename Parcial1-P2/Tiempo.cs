@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace Parcial1_P2
 {
-    public partial class Time : Form
+    public partial class Tiempo : Form
     {
-        public Time()
+        public Tiempo()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            horalabel.Text = DateTime.Now.ToLongTimeString();
+        
         }
     }
 }

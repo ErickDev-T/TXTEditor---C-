@@ -55,7 +55,7 @@ namespace Parcial1_P2
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            AbrirPanel(new Time());
+            AbrirPanel(new Tiempo());
         }
 
         // Método para guardar los datos en el archivo INI
@@ -80,6 +80,13 @@ namespace Parcial1_P2
 
             EditorTextForm editorForm = new EditorTextForm();
             editorForm.Editor_FormClosing(sender, e);
+        }
+
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            horalabel.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

@@ -13,7 +13,7 @@
     <Compile Update="PaintForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Time.cs">
+    <Compile Update="Tiempo.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

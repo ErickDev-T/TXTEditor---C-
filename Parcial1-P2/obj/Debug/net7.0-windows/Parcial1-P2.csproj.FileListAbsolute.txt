@@ -46,6 +46,6 @@ C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\P
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.EditorTextForm.resources
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.MenuForm.resources
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.Properties.Resources.resources
-C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.Time.resources
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1.B82795B5.Up2Date
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.PaintForm1.resources
+C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.Tiempo.resources

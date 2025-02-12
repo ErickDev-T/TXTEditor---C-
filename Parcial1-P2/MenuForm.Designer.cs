@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             CalcularBNB = new FontAwesome.Sharp.IconButton();
             DibujarBNB = new FontAwesome.Sharp.IconButton();
             EscribirBNB = new FontAwesome.Sharp.IconButton();
             MainPanel = new Panel();
+            horalabel = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
+            MainPanel.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -120,11 +124,27 @@
             // 
             // MainPanel
             // 
+            MainPanel.Controls.Add(horalabel);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(218, 0);
             MainPanel.Name = "MainPanel";
             MainPanel.Size = new Size(582, 402);
             MainPanel.TabIndex = 1;
+            // 
+            // horalabel
+            // 
+            horalabel.AutoSize = true;
+            horalabel.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            horalabel.Location = new Point(108, 148);
+            horalabel.Name = "horalabel";
+            horalabel.Size = new Size(386, 86);
+            horalabel.TabIndex = 0;
+            horalabel.Text = "00:00:00 PM";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
             // 
             // MenuForm
             // 
@@ -137,6 +157,8 @@
             Text = "MenuForm";
             FormClosing += Menu_FormClosing;
             panel1.ResumeLayout(false);
+            MainPanel.ResumeLayout(false);
+            MainPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -148,5 +170,7 @@
         private FontAwesome.Sharp.IconButton DibujarBNB;
         private FontAwesome.Sharp.IconButton EscribirBNB;
         private Panel MainPanel;
+        private Label horalabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

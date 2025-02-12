@@ -30,39 +30,39 @@ namespace Parcial1_P2
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            bnt1 = new Button();
             CajaResultado = new TextBox();
-            lblhISTORIAL = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
+            ResultadoLABEL = new Label();
+            bnt3 = new Button();
+            bnt2 = new Button();
+            bnt5 = new Button();
+            bnt6 = new Button();
+            bnt4 = new Button();
+            bnt8 = new Button();
+            bnt9 = new Button();
+            bnt7 = new Button();
             button10 = new Button();
             button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            btnResul = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
+            bntMuLtiplicar = new Button();
+            bntRestar = new Button();
+            bntSumar = new Button();
+            btnResulado = new Button();
+            bntPorciento = new Button();
+            bntdividir = new Button();
+            bntreset = new Button();
+            bntborrar = new Button();
             SuspendLayout();
             // 
-            // button1
+            // bnt1
             // 
-            button1.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(28, 267);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 57);
-            button1.TabIndex = 0;
-            button1.Text = "1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            bnt1.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt1.Location = new Point(28, 267);
+            bnt1.Name = "bnt1";
+            bnt1.Size = new Size(113, 57);
+            bnt1.TabIndex = 0;
+            bnt1.Text = "1";
+            bnt1.UseVisualStyleBackColor = true;
+            bnt1.Click += button1_Click_1;
             // 
             // CajaResultado
             // 
@@ -75,97 +75,102 @@ namespace Parcial1_P2
             CajaResultado.Text = "0";
             CajaResultado.TextAlign = HorizontalAlignment.Right;
             // 
-            // lblhISTORIAL
+            // ResultadoLABEL
             // 
-            lblhISTORIAL.AutoSize = true;
-            lblhISTORIAL.Location = new Point(38, 9);
-            lblhISTORIAL.Name = "lblhISTORIAL";
-            lblhISTORIAL.Size = new Size(54, 15);
-            lblhISTORIAL.TabIndex = 2;
-            lblhISTORIAL.Text = "BLANCO";
+            ResultadoLABEL.AutoSize = true;
+            ResultadoLABEL.Location = new Point(38, 9);
+            ResultadoLABEL.Name = "ResultadoLABEL";
+            ResultadoLABEL.Size = new Size(34, 15);
+            ResultadoLABEL.TabIndex = 2;
+            ResultadoLABEL.Text = ".........";
             // 
-            // button2
+            // bnt3
             // 
-            button2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(299, 267);
-            button2.Name = "button2";
-            button2.Size = new Size(113, 57);
-            button2.TabIndex = 3;
-            button2.Text = "3";
-            button2.UseVisualStyleBackColor = true;
+            bnt3.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt3.Location = new Point(299, 267);
+            bnt3.Name = "bnt3";
+            bnt3.Size = new Size(113, 57);
+            bnt3.TabIndex = 3;
+            bnt3.Text = "3";
+            bnt3.UseVisualStyleBackColor = true;
+            bnt3.Click += bnt3_Click;
             // 
-            // button3
+            // bnt2
             // 
-            button3.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(166, 267);
-            button3.Name = "button3";
-            button3.Size = new Size(113, 57);
-            button3.TabIndex = 4;
-            button3.Text = "2";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            bnt2.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt2.Location = new Point(166, 267);
+            bnt2.Name = "bnt2";
+            bnt2.Size = new Size(113, 57);
+            bnt2.TabIndex = 4;
+            bnt2.Text = "2";
+            bnt2.UseVisualStyleBackColor = true;
+            bnt2.Click += button2_Click;
             // 
-            // button4
+            // bnt5
             // 
-            button4.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(166, 204);
-            button4.Name = "button4";
-            button4.Size = new Size(113, 57);
-            button4.TabIndex = 7;
-            button4.Text = "5";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            bnt5.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt5.Location = new Point(166, 204);
+            bnt5.Name = "bnt5";
+            bnt5.Size = new Size(113, 57);
+            bnt5.TabIndex = 7;
+            bnt5.Text = "5";
+            bnt5.UseVisualStyleBackColor = true;
+            bnt5.Click += button4_Click;
             // 
-            // button5
+            // bnt6
             // 
-            button5.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(299, 204);
-            button5.Name = "button5";
-            button5.Size = new Size(113, 57);
-            button5.TabIndex = 6;
-            button5.Text = "6";
-            button5.UseVisualStyleBackColor = true;
+            bnt6.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt6.Location = new Point(299, 204);
+            bnt6.Name = "bnt6";
+            bnt6.Size = new Size(113, 57);
+            bnt6.TabIndex = 6;
+            bnt6.Text = "6";
+            bnt6.UseVisualStyleBackColor = true;
+            bnt6.Click += bnt6_Click;
             // 
-            // button6
+            // bnt4
             // 
-            button6.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.Location = new Point(28, 204);
-            button6.Name = "button6";
-            button6.Size = new Size(113, 57);
-            button6.TabIndex = 5;
-            button6.Text = "4";
-            button6.UseVisualStyleBackColor = true;
+            bnt4.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt4.Location = new Point(28, 204);
+            bnt4.Name = "bnt4";
+            bnt4.Size = new Size(113, 57);
+            bnt4.TabIndex = 5;
+            bnt4.Text = "4";
+            bnt4.UseVisualStyleBackColor = true;
+            bnt4.Click += bnt4_Click;
             // 
-            // button7
+            // bnt8
             // 
-            button7.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.Location = new Point(166, 141);
-            button7.Name = "button7";
-            button7.Size = new Size(113, 57);
-            button7.TabIndex = 10;
-            button7.Text = "8";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            bnt8.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt8.Location = new Point(166, 141);
+            bnt8.Name = "bnt8";
+            bnt8.Size = new Size(113, 57);
+            bnt8.TabIndex = 10;
+            bnt8.Text = "8";
+            bnt8.UseVisualStyleBackColor = true;
+            bnt8.Click += button7_Click;
             // 
-            // button8
+            // bnt9
             // 
-            button8.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.Location = new Point(299, 141);
-            button8.Name = "button8";
-            button8.Size = new Size(113, 57);
-            button8.TabIndex = 9;
-            button8.Text = "9";
-            button8.UseVisualStyleBackColor = true;
+            bnt9.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt9.Location = new Point(299, 141);
+            bnt9.Name = "bnt9";
+            bnt9.Size = new Size(113, 57);
+            bnt9.TabIndex = 9;
+            bnt9.Text = "9";
+            bnt9.UseVisualStyleBackColor = true;
+            bnt9.Click += bnt9_Click;
             // 
-            // button9
+            // bnt7
             // 
-            button9.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button9.Location = new Point(28, 141);
-            button9.Name = "button9";
-            button9.Size = new Size(113, 57);
-            button9.TabIndex = 8;
-            button9.Text = "7";
-            button9.UseVisualStyleBackColor = true;
+            bnt7.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bnt7.Location = new Point(28, 141);
+            bnt7.Name = "bnt7";
+            bnt7.Size = new Size(113, 57);
+            bnt7.TabIndex = 8;
+            bnt7.Text = "7";
+            bnt7.UseVisualStyleBackColor = true;
+            bnt7.Click += bnt7_Click;
             // 
             // button10
             // 
@@ -188,112 +193,120 @@ namespace Parcial1_P2
             button11.Text = ".";
             button11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // bntMuLtiplicar
             // 
-            button12.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button12.Location = new Point(432, 141);
-            button12.Name = "button12";
-            button12.Size = new Size(113, 57);
-            button12.TabIndex = 13;
-            button12.Text = "X";
-            button12.UseVisualStyleBackColor = true;
+            bntMuLtiplicar.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntMuLtiplicar.Location = new Point(432, 141);
+            bntMuLtiplicar.Name = "bntMuLtiplicar";
+            bntMuLtiplicar.Size = new Size(113, 57);
+            bntMuLtiplicar.TabIndex = 13;
+            bntMuLtiplicar.Text = "X";
+            bntMuLtiplicar.UseVisualStyleBackColor = true;
+            bntMuLtiplicar.Click += bntMuLtiplicar_Click;
             // 
-            // button13
+            // bntRestar
             // 
-            button13.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button13.Location = new Point(432, 204);
-            button13.Name = "button13";
-            button13.Size = new Size(113, 57);
-            button13.TabIndex = 14;
-            button13.Text = "-";
-            button13.UseVisualStyleBackColor = true;
+            bntRestar.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntRestar.Location = new Point(432, 204);
+            bntRestar.Name = "bntRestar";
+            bntRestar.Size = new Size(113, 57);
+            bntRestar.TabIndex = 14;
+            bntRestar.Text = "-";
+            bntRestar.UseVisualStyleBackColor = true;
+            bntRestar.Click += bntRestar_Click;
             // 
-            // button14
+            // bntSumar
             // 
-            button14.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button14.Location = new Point(432, 267);
-            button14.Name = "button14";
-            button14.Size = new Size(113, 57);
-            button14.TabIndex = 15;
-            button14.Text = "+";
-            button14.UseVisualStyleBackColor = true;
+            bntSumar.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntSumar.Location = new Point(432, 267);
+            bntSumar.Name = "bntSumar";
+            bntSumar.Size = new Size(113, 57);
+            bntSumar.TabIndex = 15;
+            bntSumar.Text = "+";
+            bntSumar.UseVisualStyleBackColor = true;
+            bntSumar.Click += bntSumar_Click;
             // 
-            // btnResul
+            // btnResulado
             // 
-            btnResul.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnResul.Location = new Point(432, 330);
-            btnResul.Name = "btnResul";
-            btnResul.Size = new Size(113, 57);
-            btnResul.TabIndex = 16;
-            btnResul.Text = "=";
-            btnResul.UseVisualStyleBackColor = true;
+            btnResulado.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnResulado.Location = new Point(432, 330);
+            btnResulado.Name = "btnResulado";
+            btnResulado.Size = new Size(113, 57);
+            btnResulado.TabIndex = 16;
+            btnResulado.Text = "=";
+            btnResulado.UseVisualStyleBackColor = true;
+            btnResulado.Click += btnResulado_Click;
             // 
-            // button16
+            // bntPorciento
             // 
-            button16.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button16.Location = new Point(28, 78);
-            button16.Name = "button16";
-            button16.Size = new Size(113, 57);
-            button16.TabIndex = 17;
-            button16.Text = "%";
-            button16.UseVisualStyleBackColor = true;
+            bntPorciento.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntPorciento.Location = new Point(28, 78);
+            bntPorciento.Name = "bntPorciento";
+            bntPorciento.Size = new Size(113, 57);
+            bntPorciento.TabIndex = 17;
+            bntPorciento.Text = "%";
+            bntPorciento.UseVisualStyleBackColor = true;
+            bntPorciento.Click += bntPorciento_Click;
             // 
-            // button17
+            // bntdividir
             // 
-            button17.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button17.Location = new Point(166, 78);
-            button17.Name = "button17";
-            button17.Size = new Size(113, 57);
-            button17.TabIndex = 18;
-            button17.Text = "/";
-            button17.UseVisualStyleBackColor = true;
+            bntdividir.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntdividir.Location = new Point(166, 78);
+            bntdividir.Name = "bntdividir";
+            bntdividir.Size = new Size(113, 57);
+            bntdividir.TabIndex = 18;
+            bntdividir.Text = "/";
+            bntdividir.UseVisualStyleBackColor = true;
+            bntdividir.Click += bntdividir_Click;
             // 
-            // button18
+            // bntreset
             // 
-            button18.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button18.Location = new Point(299, 78);
-            button18.Name = "button18";
-            button18.Size = new Size(113, 57);
-            button18.TabIndex = 19;
-            button18.Text = "C";
-            button18.UseVisualStyleBackColor = true;
+            bntreset.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntreset.Location = new Point(299, 78);
+            bntreset.Name = "bntreset";
+            bntreset.Size = new Size(113, 57);
+            bntreset.TabIndex = 19;
+            bntreset.Text = "C";
+            bntreset.UseVisualStyleBackColor = true;
+            bntreset.Click += bntreset_Click;
             // 
-            // button19
+            // bntborrar
             // 
-            button19.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button19.Location = new Point(432, 78);
-            button19.Name = "button19";
-            button19.Size = new Size(113, 57);
-            button19.TabIndex = 20;
-            button19.Text = "<";
-            button19.UseVisualStyleBackColor = true;
+            bntborrar.Font = new Font("Arial Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bntborrar.Location = new Point(432, 78);
+            bntborrar.Name = "bntborrar";
+            bntborrar.Size = new Size(113, 57);
+            bntborrar.TabIndex = 20;
+            bntborrar.Text = "<";
+            bntborrar.UseVisualStyleBackColor = true;
+            bntborrar.Click += bntborrar_Click;
             // 
             // CalculatorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(582, 402);
-            Controls.Add(button19);
-            Controls.Add(button18);
-            Controls.Add(button17);
-            Controls.Add(button16);
-            Controls.Add(btnResul);
-            Controls.Add(button14);
-            Controls.Add(button13);
-            Controls.Add(button12);
+            Controls.Add(bntborrar);
+            Controls.Add(bntreset);
+            Controls.Add(bntdividir);
+            Controls.Add(bntPorciento);
+            Controls.Add(btnResulado);
+            Controls.Add(bntSumar);
+            Controls.Add(bntRestar);
+            Controls.Add(bntMuLtiplicar);
             Controls.Add(button11);
             Controls.Add(button10);
-            Controls.Add(button7);
-            Controls.Add(button8);
-            Controls.Add(button9);
-            Controls.Add(button4);
-            Controls.Add(button5);
-            Controls.Add(button6);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(lblhISTORIAL);
+            Controls.Add(bnt8);
+            Controls.Add(bnt9);
+            Controls.Add(bnt7);
+            Controls.Add(bnt5);
+            Controls.Add(bnt6);
+            Controls.Add(bnt4);
+            Controls.Add(bnt2);
+            Controls.Add(bnt3);
+            Controls.Add(ResultadoLABEL);
             Controls.Add(CajaResultado);
-            Controls.Add(button1);
+            Controls.Add(bnt1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CalculatorForm";
             Text = "Calculator";
@@ -303,15 +316,30 @@ namespace Parcial1_P2
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            // Add your button4 click event logic here
+            LeerNumero("5");
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // Add your button7 click event logic here
+            LeerNumero("8");
+        }
+
+        private void bnt6_Click(object sender, EventArgs e)
+        {
+            LeerNumero("6");
+        }
+
+        private void bnt9_Click(object sender, EventArgs e)
+        {
+            LeerNumero("9");
         }
 
         private void button10_Click(object sender, EventArgs e)
+        {
+            LeerNumero("0");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             if (CajaResultado.Text == "0")
             {
@@ -322,33 +350,28 @@ namespace Parcial1_P2
                 CajaResultado.Text += "0";
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // Add your button3 click event logic here
-        }
         #endregion
 
-        private Button button1;
+        private Button bnt1;
         private TextBox CajaResultado;
-        private Label lblhISTORIAL;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
+        private Label ResultadoLABEL;
+        private Button bnt3;
+        private Button bnt2;
+        private Button bnt5;
+        private Button bnt6;
+        private Button bnt4;
+        private Button bnt8;
+        private Button bnt9;
+        private Button bnt7;
         private Button button10;
         private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button btnResul;
-        private Button button16;
-        private Button button17;
-        private Button button18;
-        private Button button19;
+        private Button bntMuLtiplicar;
+        private Button bntRestar;
+        private Button bntSumar;
+        private Button btnResulado;
+        private Button bntPorciento;
+        private Button bntdividir;
+        private Button bntreset;
+        private Button bntborrar;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Parcial1_P2
 {
-    partial class Time
+    partial class Tiempo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
+            components = new System.ComponentModel.Container();
+            horalabel = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // label1
+            // horalabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(194, 125);
-            label1.Name = "label1";
-            label1.Size = new Size(109, 40);
-            label1.TabIndex = 0;
-            label1.Text = "1:23:22";
-            label1.Click += label1_Click;
+            horalabel.AutoSize = true;
+            horalabel.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            horalabel.Location = new Point(115, 131);
+            horalabel.Name = "horalabel";
+            horalabel.Size = new Size(386, 86);
+            horalabel.TabIndex = 1;
+            horalabel.Text = "00:00:00 PM";
             // 
-            // label2
+            // timer1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(203, 75);
-            label2.Name = "label2";
-            label2.Size = new Size(79, 40);
-            label2.TabIndex = 1;
-            label2.Text = "Time";
-            label2.Click += label2_Click;
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
             // 
-            // Time
+            // Tiempo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 284);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(582, 402);
+            Controls.Add(horalabel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Time";
-            Text = "Time";
+            Name = "Tiempo";
+            Text = "Tiempo";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private Label horalabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
