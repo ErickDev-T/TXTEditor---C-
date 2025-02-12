@@ -14,3 +14,4 @@ C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\P
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1-P2.genruntimeconfig.cache
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\ref\Parcial1-P2.dll
 C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1_P2.textedit.resources
+C:\Users\Erick Tejada\Desktop\Parcial1-P2\Parcial1-P2\obj\Debug\net7.0-windows\Parcial1-P2.sourcelink.json

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            openFileDialog1 = new OpenFileDialog();
+            dlgOpenTXT = new OpenFileDialog();
             menuStrip1 = new MenuStrip();
             MenuFile = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
-            openToolStripMenuItem = new ToolStripMenuItem();
-            safeToolStripMenuItem = new ToolStripMenuItem();
+            dlgOpen = new ToolStripMenuItem();
+            dlgSafe = new ToolStripMenuItem();
             MenuExit = new ToolStripMenuItem();
             formatToolStripMenuItem = new ToolStripMenuItem();
             MenuFormatBold = new ToolStripMenuItem();
@@ -43,16 +43,16 @@
             MenuSmallSize = new ToolStripMenuItem();
             MenuMediunSize = new ToolStripMenuItem();
             MenuLargeSize = new ToolStripMenuItem();
-            safeTXT = new SaveFileDialog();
+            dlgsafeTXT = new SaveFileDialog();
             txtEditor = new TextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // openFileDialog1
+            // dlgOpenTXT
             // 
-            openFileDialog1.FileName = "OpenTXT";
-            openFileDialog1.Filter = "Text Files(*.txt)|*.txt";
-            openFileDialog1.Title = "Open File";
+            dlgOpenTXT.FileName = "TxtOpen";
+            dlgOpenTXT.Filter = "Text Files(*.txt)|*.txt";
+            dlgOpenTXT.Title = "Open File";
             // 
             // menuStrip1
             // 
@@ -65,7 +65,7 @@
             // 
             // MenuFile
             // 
-            MenuFile.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, safeToolStripMenuItem, MenuExit });
+            MenuFile.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, dlgOpen, dlgSafe, MenuExit });
             MenuFile.Name = "MenuFile";
             MenuFile.Size = new Size(37, 20);
             MenuFile.Text = "&File";
@@ -78,19 +78,19 @@
             newToolStripMenuItem.Text = "New";
             newToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
-            // openToolStripMenuItem
+            // dlgOpen
             // 
-            openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
-            openToolStripMenuItem.Text = "&Open";
-            openToolStripMenuItem.Click += MenuOpenClick;
+            dlgOpen.Name = "dlgOpen";
+            dlgOpen.Size = new Size(103, 22);
+            dlgOpen.Text = "&Open";
+            dlgOpen.Click += MenuOpen_Click;
             // 
-            // safeToolStripMenuItem
+            // dlgSafe
             // 
-            safeToolStripMenuItem.Name = "safeToolStripMenuItem";
-            safeToolStripMenuItem.Size = new Size(103, 22);
-            safeToolStripMenuItem.Text = "&Safe";
-            safeToolStripMenuItem.Click += MenuSafeClick;
+            dlgSafe.Name = "dlgSafe";
+            dlgSafe.Size = new Size(103, 22);
+            dlgSafe.Text = "&Safe";
+            dlgSafe.Click += MenuSafeClick;
             // 
             // MenuExit
             // 
@@ -110,21 +110,21 @@
             // MenuFormatBold
             // 
             MenuFormatBold.Name = "MenuFormatBold";
-            MenuFormatBold.Size = new Size(180, 22);
+            MenuFormatBold.Size = new Size(125, 22);
             MenuFormatBold.Text = "&Bold";
             MenuFormatBold.Click += MenuFormatBold_Click;
             // 
             // MenuFormatItalic
             // 
             MenuFormatItalic.Name = "MenuFormatItalic";
-            MenuFormatItalic.Size = new Size(180, 22);
+            MenuFormatItalic.Size = new Size(125, 22);
             MenuFormatItalic.Text = "&Italic";
             MenuFormatItalic.Click += MenuFormatItalic_Click;
             // 
             // MenuFormatUnderline
             // 
             MenuFormatUnderline.Name = "MenuFormatUnderline";
-            MenuFormatUnderline.Size = new Size(180, 22);
+            MenuFormatUnderline.Size = new Size(125, 22);
             MenuFormatUnderline.Text = "&Underline";
             MenuFormatUnderline.Click += MenuFormatUnderline_Click;
             // 
@@ -132,7 +132,7 @@
             // 
             MenuFormatSize.DropDownItems.AddRange(new ToolStripItem[] { MenuSmallSize, MenuMediunSize, MenuLargeSize });
             MenuFormatSize.Name = "MenuFormatSize";
-            MenuFormatSize.Size = new Size(180, 22);
+            MenuFormatSize.Size = new Size(125, 22);
             MenuFormatSize.Text = "&Size";
             MenuFormatSize.Click += MenuFormatSize_Click;
             // 
@@ -141,27 +141,27 @@
             MenuSmallSize.Checked = true;
             MenuSmallSize.CheckState = CheckState.Checked;
             MenuSmallSize.Name = "MenuSmallSize";
-            MenuSmallSize.Size = new Size(180, 22);
+            MenuSmallSize.Size = new Size(115, 22);
             MenuSmallSize.Text = "&Small";
             MenuSmallSize.Click += MenuFormatSize_Click;
             // 
             // MenuMediunSize
             // 
             MenuMediunSize.Name = "MenuMediunSize";
-            MenuMediunSize.Size = new Size(180, 22);
+            MenuMediunSize.Size = new Size(115, 22);
             MenuMediunSize.Text = "&Mediun";
             MenuMediunSize.Click += MenuFormatSize_Click;
             // 
             // MenuLargeSize
             // 
             MenuLargeSize.Name = "MenuLargeSize";
-            MenuLargeSize.Size = new Size(180, 22);
+            MenuLargeSize.Size = new Size(115, 22);
             MenuLargeSize.Text = "&Large";
             MenuLargeSize.Click += MenuFormatSize_Click;
             // 
-            // safeTXT
+            // dlgsafeTXT
             // 
-            safeTXT.Filter = "Text Files(*.txt)|*.txt";
+            dlgsafeTXT.Filter = "Text Files(*.txt)|*.txt";
             // 
             // txtEditor
             // 
@@ -193,13 +193,13 @@
         }
 
         #endregion
-        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog dlgOpenTXT;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem MenuFile;
         private ToolStripMenuItem formatToolStripMenuItem;
-        private SaveFileDialog safeTXT;
-        private ToolStripMenuItem openToolStripMenuItem;
-        private ToolStripMenuItem safeToolStripMenuItem;
+        private SaveFileDialog dlgsafeTXT;
+        private ToolStripMenuItem dlgOpen;
+        private ToolStripMenuItem dlgSafe;
         private ToolStripMenuItem MenuExit;
         private TextBox txtEditor;
         private ToolStripMenuItem MenuFormatBold;

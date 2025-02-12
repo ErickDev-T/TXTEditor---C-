@@ -30,16 +30,6 @@ namespace Parcial1_P2
             txtEditor.Font = new Font(fontName, fontSize, newFont);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             StreamReader inputFile = new StreamReader(Application.StartupPath + "\\note.ini");
@@ -63,30 +53,7 @@ namespace Parcial1_P2
             ChangeFont();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuOpenClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuSafeClick(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,9 +126,7 @@ namespace Parcial1_P2
                     fontSize = 12;
                     MenuMediunSize.Checked = true;
                     break;
-
                 case "&Large":
-
                     fontSize = 18;
                     MenuLargeSize.Checked = true;
                     break;
@@ -185,5 +150,27 @@ namespace Parcial1_P2
 
             outputFile.Close();
         }
+
+        private void MenuOpen_Click(object sender, EventArgs e)
+        {
+            if (dlgOpenTXT.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader inputFile = new StreamReader(dlgOpenTXT.FileName);
+                txtEditor.Text = inputFile.ReadToEnd();
+                inputFile.Close();
+                txtEditor.SelectionLength = 0;
+            }
+        }
+        private void MenuSafeClick(object sender, EventArgs e)
+        {
+            if (dlgsafeTXT.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter outputFile = new StreamWriter(dlgsafeTXT.FileName);
+                outputFile.Write(txtEditor.Text);
+                outputFile.Close();
+
+            }
+        }
     }
 }
+
