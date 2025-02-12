@@ -1,8 +1,13 @@
+using System.IO;
+
 namespace Parcial1_P2
 {
-    public partial class textedit : Form
+    public partial class EditorTextForm : Form
     {
-        public textedit()
+
+       
+
+        public EditorTextForm()
         {
             InitializeComponent();
         }
@@ -33,9 +38,10 @@ namespace Parcial1_P2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            string filePath = Path.Combine(Application.StartupPath, "note.ini");
             try
             {
-                StreamReader inputFile = new StreamReader(Application.StartupPath + "\\note.ini");
+                StreamReader inputFile = new StreamReader(filePath);
                 MenuFormatBold.Checked = Convert.ToBoolean(inputFile.ReadLine());
                 MenuFormatUnderline.Checked = Convert.ToBoolean(inputFile.ReadLine());
                 MenuFormatItalic.Checked = Convert.ToBoolean(inputFile.ReadLine());
@@ -54,14 +60,16 @@ namespace Parcial1_P2
                 }
                 inputFile.Close();
             }
-            catch(FileNotFoundException)
+            catch (FileNotFoundException)
             {
+                MessageBox.Show("Archivo no encontrado en la ruta: " + filePath);
                 MessageBox.Show("Configuracion no encontrada", "Configuracion Predeterminada", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MenuFormatBold.Checked = false;
                 MenuFormatItalic.Checked = false;
                 MenuFormatUnderline.Checked = false;
                 MenuSmallSize.PerformClick();
             }
+
             ChangeFont();
         }
 
@@ -87,6 +95,7 @@ namespace Parcial1_P2
                 txtEditor.Text = "";
             }
         }
+
 
         private void MenuExit_Click(object sender, EventArgs e)
         {
@@ -145,9 +154,9 @@ namespace Parcial1_P2
             ChangeFont();
         }
 
-        private void Editor_FormClosing(object sender, FormClosingEventArgs e)
+        public void Editor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StreamWriter outputFile = new StreamWriter(Application.StartupPath + "//note.ini");
+            StreamWriter outputFile = new StreamWriter(Application.StartupPath + "note.ini");
             outputFile.WriteLine(MenuFormatBold.Checked);
             outputFile.WriteLine(MenuFormatItalic.Checked);
             outputFile.WriteLine(MenuFormatUnderline.Checked);
@@ -155,11 +164,26 @@ namespace Parcial1_P2
                 outputFile.WriteLine(1);
             else if (MenuMediunSize.Checked)
                 outputFile.WriteLine(2);
-            else
+            else if (MenuLargeSize.Checked)
                 outputFile.WriteLine(3);
 
             outputFile.Close();
         }
+
+        public void SaveDataToFile(string data)
+        {
+            string filePath = Path.Combine(Application.StartupPath, "note.ini");
+
+            // Si el archivo no existe, lo crea
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath).Close(); // Crea el archivo si no existe
+            }
+
+            // Escribe los datos al archivo
+            File.WriteAllText(filePath, data);  // Sobreescribe los datos en el archivo
+        }
+
 
         private void MenuOpen_Click(object sender, EventArgs e)
         {

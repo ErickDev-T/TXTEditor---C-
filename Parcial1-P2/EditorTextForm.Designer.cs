@@ -1,6 +1,6 @@
 ﻿namespace Parcial1_P2
 {
-    partial class textedit
+    partial class EditorTextForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -59,7 +59,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { MenuFile, formatToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(384, 24);
+            menuStrip1.Size = new Size(575, 24);
             menuStrip1.TabIndex = 9;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -165,23 +165,24 @@
             // 
             // txtEditor
             // 
-            txtEditor.Location = new Point(12, 27);
+            txtEditor.Location = new Point(67, 27);
             txtEditor.Multiline = true;
             txtEditor.Name = "txtEditor";
             txtEditor.ScrollBars = ScrollBars.Vertical;
-            txtEditor.Size = new Size(360, 240);
+            txtEditor.Size = new Size(437, 281);
             txtEditor.TabIndex = 10;
             txtEditor.TextChanged += textBox1_TextChanged;
             // 
-            // textedit
+            // EditorTextForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 283);
+            ClientSize = new Size(575, 335);
             Controls.Add(txtEditor);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
-            Name = "textedit";
+            Name = "EditorTextForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Paint";
             FormClosing += Editor_FormClosing;
