@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\net7.0-windows\note.ini" />
+    <Folder Include="bin\Debug\net7.0-windows\" />
   </ItemGroup>
 
 </Project>

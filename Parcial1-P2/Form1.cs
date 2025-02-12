@@ -32,28 +32,38 @@ namespace Parcial1_P2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StreamReader inputFile = new StreamReader(Application.StartupPath + "\\note.ini");
-            MenuFormatBold.Checked = Convert.ToBoolean(inputFile.ReadLine());
-            MenuFormatUnderline.Checked = Convert.ToBoolean(inputFile.ReadLine());
-            MenuFormatItalic.Checked = Convert.ToBoolean(inputFile.ReadLine());
-            int i = Convert.ToInt32(inputFile.ReadLine());
-            switch (i)
+
+            try
             {
-                case 1:
-                    MenuSmallSize.PerformClick();
-                    break;
-                case 2:
-                    MenuMediunSize.PerformClick();
-                    break;
-                case 3:
-                    MenuLargeSize.PerformClick();
-                    break;
+                StreamReader inputFile = new StreamReader(Application.StartupPath + "\\note.ini");
+                MenuFormatBold.Checked = Convert.ToBoolean(inputFile.ReadLine());
+                MenuFormatUnderline.Checked = Convert.ToBoolean(inputFile.ReadLine());
+                MenuFormatItalic.Checked = Convert.ToBoolean(inputFile.ReadLine());
+                int i = Convert.ToInt32(inputFile.ReadLine());
+                switch (i)
+                {
+                    case 1:
+                        MenuSmallSize.PerformClick();
+                        break;
+                    case 2:
+                        MenuMediunSize.PerformClick();
+                        break;
+                    case 3:
+                        MenuLargeSize.PerformClick();
+                        break;
+                }
+                inputFile.Close();
             }
-            inputFile.Close();
+            catch(FileNotFoundException)
+            {
+                MessageBox.Show("Configuracion no encontrada", "Configuracion Predeterminada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MenuFormatBold.Checked = false;
+                MenuFormatItalic.Checked = false;
+                MenuFormatUnderline.Checked = false;
+                MenuSmallSize.PerformClick();
+            }
             ChangeFont();
         }
-
-        
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
